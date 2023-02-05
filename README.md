@@ -6,7 +6,10 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-# {repo-template}
+# Open Data CKAN Slackbot
+
+This is a netlify function for a Slackbot that queries the CKAN API of [Berlin's data portal](https://daten.berlin.de) for new datasets and for updated datasets. It's written in TypeScript, using the Bolt JS framework.
+It can be triggered via specific keywords in Slack messages. Also, it responds to the slash command /opendata [number of days] and then displays the new and updated records for the queried number of days.
 
 ## TODO (after you generated the repo)
 
@@ -43,23 +46,31 @@ You can use it on GitHub just by commenting on PRs and issues:
 
 ## Prerequisites
 
-tbd...
+- [Netlify](https://www.netlify.com) Account
+- [Slack](https://slack.com/intl/de-de/) Account and Workspace
 
 ## Installation
 
-tbd...
+* Run `npm install` to install all node dependencies.
+* Install Netlify CLI globally using the command `npm install netlify-dev -g`.
+* To run this function locally, you'll need to link your Netlify site with your repository. Easiest way is to create a `.netlify` folder and inside that, create a `state.json` file with the following contents. Get your site id or API id from the site settings and paste it here. Then run the command `netlify link`.
+```json
+{
+	"siteId": "PASTE YOUR API ID HERE"
+}
+```
+* Run `netlify build` to build your code and generate a function. This command uses the settings in the `netlify.toml` file to run a build command. The build command compiles TypeScript files into JavaScript and automatically creates the required `netlify/functions` folder for you and places the `index.js` function file inside this folder. 
+* Run `netlify dev` to start a local development server to test your function. If the local server starts at port 8888, then the URL to access this function is `http://localhost:8888/.netlify/functions/index`.
 
 ## Usage or Deployment
 
-tbd...
+There are several steps necessary to get the Slackbot running.
 
-## Development
+- deploy the function to netlify
+- integrate Slack by creating a Slack app, grabbing the credentials and integrating it into the function so that the function can communicate with the Slack app
+- configure the slack app to subscribe to events and to implement the slash command
 
-tbd...
-
-## Tests
-
-tbd...
+All this steps are described in the Medium article ["Creating a Slack Bot Using Netlify Functions"](https://levelup.gitconnected.com/creating-a-slack-bot-using-netlify-functions-465d2a981686) by Clyde D'Souza. You can follow the tutorial to get the app running and to deploy it.
 
 ## Contributing
 
@@ -83,12 +94,6 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
-
-## Content Licensing
-
-Texts and content available as [CC BY](https://creativecommons.org/licenses/by/3.0/de/).
-
-Illustrations by {MARIA_MUSTERFRAU}, all rights reserved.
 
 ## Credits
 
@@ -118,4 +123,3 @@ Illustrations by {MARIA_MUSTERFRAU}, all rights reserved.
   </tr>
 </table>
 
-## Related Projects
