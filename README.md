@@ -103,7 +103,7 @@ This project follows the [all-contributors](https://github.com/all-contributors/
       Made by <a href="https://citylab-berlin.org/de/start/">
         <br />
         <br />
-        <img width="200" src="https://citylab-berlin.org/wp-content/uploads/2021/05/citylab-logo.svg" />
+        <img width="200" src="https://logos.citylab-berlin.org/logo-odis-berlin.svg" />
       </a>
     </td>
     <td>
@@ -111,13 +111,6 @@ This project follows the [all-contributors](https://github.com/all-contributors/
         <br />
         <br />
         <img width="150" src="https://citylab-berlin.org/wp-content/uploads/2021/05/tsb.svg" />
-      </a>
-    </td>
-    <td>
-      Supported by <a href="https://www.berlin.de/rbmskzl/">
-        <br />
-        <br />
-        <img width="80" src="https://citylab-berlin.org/wp-content/uploads/2021/12/B_RBmin_Skzl_Logo_DE_V_PT_RGB-300x200.png" />
       </a>
     </td>
   </tr>
