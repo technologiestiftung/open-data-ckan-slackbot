@@ -1,0 +1,14 @@
+{
+    "compilerOptions": { 
+      "target": "ESNext", 
+      "module": "ESNext",
+      "strict": true, 
+      "declaration": false,
+      "esModuleInterop": true,
+      "moduleResolution": "node"
+    },
+    "exclude": [
+        "node_modules",
+        "netlify"
+    ]
+  }
